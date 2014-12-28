@@ -1,6 +1,6 @@
 //  ********* DETERMINES IF PRIME **************
 function isPrime(testNumber){ 
-  // tests everything from 2 to the number -1
+  // tests everything from 2 to the 1 less than the number
   for (var i=2; i<testNumber; i++){
     if (testNumber % i == 0){
       return false;	
@@ -13,7 +13,7 @@ function isPrime(testNumber){
 
 //  ********* PRINTS WHAT A NUMBER IS DIVISIBLE BY **************
 function divisibleBy(testNumber){ 
-  // tests everything from 2 to the number -1
+  // tests everything from 2 to the 1 less than the number
   for (var i=2; i<testNumber; i++){
     if (testNumber % i == 0){
       document.write("Your number is divisible by " + i + "." + "<br>");	
