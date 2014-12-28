@@ -1,0 +1,52 @@
+//this function uses my isPrime function
+function isPrime(testNumber){ 
+  // tests everything from 2 to the number -1
+  if((testNumber == 0) || (testNumber == 1) || (testNumber == 2)){
+      return true;
+  }
+  for (var i=2; i<testNumber; i++){
+      if (testNumber % i == 0){
+          return false;	
+      }
+      if (i == testNumber -1){
+          return true;
+      }
+  }
+}
+
+//  ********* DETERMINES THE NTH PRIME **************
+function PrimeFinder(desiredPrime) {   
+  //initializes values for use later
+  var foundPrime = 0;  //the number of primes found so far
+  var lastPrime = 0;  //the last prime that was found
+  var count = 2;  //starts at 2 since that is considered the first prime number
+  
+  //continues counting until the desired number of primes have been found
+  while (foundPrime < desiredPrime){
+      if (isPrime(count)){
+          foundPrime++;
+          lastPrime = count;
+      }
+      count++;
+  }
+  //returns the nth desired prime
+  return(lastPrime);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+                            
+                            
+  
